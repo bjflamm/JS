@@ -103,9 +103,9 @@
 
 		$(function () {
 			$( "#slider-year" ).slider({
-			  value:2013,
+			  value:2020,
 			  min: 1880,
-			  max: 2013,
+			  max: 2020,
 			  step: 1,
 			  slide: function( event, ui ) {
 				$( "#yearVal" ).val( ui.value );
@@ -133,7 +133,7 @@
 			var searchQuery = {
 			  "async": true,
 			  "crossDomain": true,
-			  "url": "https://azs-playground.search.windows.net/indexes/babynames/docs?api-version=2015-02-28&$orderby=count+desc&$top=100&$select=firstName,count&search=" + text + "*&$filter=year+eq+" + year,
+			  "url": "https://flamm-azure.search.windows.net",
 			  "method": "GET",
 			  "headers": {
 				"api-key": apiKey,
